@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_POHDR
+    description: PO Header
+    columns:
+      - name: PO
+        description: Unique PO number and not null
+        tests:
+          - unique
+          - not_null
+      - name: DocType
+        tests:
+          - accepted_values:
+              values: ['NB', 'ZPAR', 'MK','LPA','LP','UB']
+
+  - name: stg_POITM
+    columns:
+      - name: PO
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_POHDR')
+              field: PO
+
