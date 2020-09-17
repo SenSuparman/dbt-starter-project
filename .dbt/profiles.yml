@@ -6,7 +6,7 @@ jaffle_shop: # this needs to match the profile: in your dbt_project.yml file
       method: service-account
       keyfile: C:/Users/Sen Suparman/.dbt/dbt-user-creds.json # replace this with the full path to your keyfile
       project: graphic-option-238901 # Replace this with your project id
-      schema: dbt_sen # Replace this with dbt_your_name, e.g. dbt_bob
+      schema: dbt_udemy # Replace this with dbt_your_name, e.g. dbt_bob
       threads: 1
       timeout_seconds: 300
       location: australia-southeast1
